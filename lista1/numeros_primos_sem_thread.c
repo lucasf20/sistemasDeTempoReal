@@ -6,12 +6,15 @@
 
 void main(){
     clock_t t1, t2;
+    float half;
 
     t1 = clock();
     for(int i = 0; i<=99999; i++){
+        half = i/2;
         for(int n = 2; n <= i; n++){
-            if(n == i){
+            if(n > half){
                 printf("%i eh um numero primo\n", i);
+                break;
             }
             if( i % n == 0){
                 break;

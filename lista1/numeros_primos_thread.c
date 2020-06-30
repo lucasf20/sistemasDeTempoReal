@@ -47,7 +47,9 @@ void main(){
 
 void *primos(void *args){
     intervals *arg = (intervals *) args;
+    float half;
     for(int i = arg->comeco; i < arg->fim; i++){
+        half = i/2;
         for(int n = 2; n <= i; n++){
             if(n == i){
                 printf("%i eh um numero primo\n", i);
