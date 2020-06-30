@@ -51,8 +51,9 @@ void *primos(void *args){
     for(int i = arg->comeco; i < arg->fim; i++){
         half = i/2;
         for(int n = 2; n <= i; n++){
-            if(n == i){
+            if(n > half){
                 printf("%i eh um numero primo\n", i);
+                break;
             }
             if( i % n == 0){
                 break;
